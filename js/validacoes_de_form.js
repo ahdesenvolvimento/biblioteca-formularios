@@ -11,22 +11,56 @@
     const data = document.getElementsByName('data');
     const hora = document.getElementsByName('hora');
     */
-   
-const cpf = document.getElementById('cpf');
-const rg = document.getElementById('rg');
 
-const email = document.getElementById('email');
-const gmail = document.getElementById('gmail');
+const cpf = document.getElementById('cpf');
+if (cpf != null){
+    cpf.addEventListener('keypress', validacao_cpf);
+    cpf.addEventListener('keypress', function(){
+        if (cpf.value.length == 3){
+            cpf.value += '.';
+        }
+        if (cpf.value.length == 7){
+            cpf.value += '.';
+        }
+        if (cpf.value.length == 11){
+            cpf.value += '-';
+        }
+    });
+}
+
+const rg = document.getElementById('rg');
+if (rg != null){
+    rg.addEventListener('keypress', validacao_rg)
+    rg.addEventListener('keypress', function(){
+        if (rg.value.length == 1){
+            rg.value += '.';
+        }
+        if (rg.value.length == 5){
+            rg.value += '.';
+        }
+    });
+}
+
 const telefone = document.getElementById('telefone');
-const senha = document.getElementById('senha');
-const data = document.getElementById('data');
-const hora = document.getElementById('hora');
+if (telefone != null){
+    telefone.addEventListener('keypress', validar_telefone);
+    telefone.addEventListener('keypress', function(){
+        if (telefone.value.length == 0){
+            telefone.value += '(';
+        }
+        if (telefone.value.length == 3){
+            telefone.value += ')';
+        }
+        if (telefone.value.length == 9){
+            telefone.value += '-';
+        }
+    });
+}
+
 const cpf_msg = document.getElementById('cpf_message')
 
-cpf.addEventListener('keypress', validacao_cpf);
-rg.addEventListener('keypress', validacao_rg);
-telefone.addEventListener('keypress', validar_telefone);
-email.addEventListener('input', validacao_email);
+
+//email.addEventListener('input', validacao_email);
 
 function validacao_cpf(e){
     if (permitir_apenas_numeros()){

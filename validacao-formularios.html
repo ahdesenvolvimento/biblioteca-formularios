@@ -6,6 +6,7 @@
         <title>Validação de formulários</title>
         <link rel="stylesheet" href="css/estilo_validacao.css">
         <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+        <script src="js/jquery.js"></script>
     </head>
     <body>
         <script>
@@ -50,7 +51,7 @@
                             <label for="">CPF</label>
                         </div>
                         <div class="col-12">
-                            <input type="text" name="cpf" id="cpf" maxlength="11" onkeypress="validacao_cpf_com_mensagem(true, 'Apenas números134124');" autocomplete="off">
+                            <input type="text" maxlength="14" name="cpf" id="cpf" maxlength="11" onkeypress="validacao_cpf_com_mensagem(true, 'Apenas números134124');" autocomplete="off">
                             
                         </div>
                         <div class="col-12">
@@ -77,7 +78,7 @@
                             <label for="">RG</label>
                         </div>
                         <div class="col-12">
-                            <input type="text" name="rg" id="rg" maxlength="8" onkeypress="validacao_rg_com_mensagem(true, 'htmmm');" autocomplete="off">
+                            <input type="text" name="rg" id="rg" maxlength="9" autocomplete="off">
                         </div>
                         <div class="col-12">
                             <span id="rg_message"></span>
@@ -91,7 +92,7 @@
                             <label for="">Telefone</label>
                         </div>
                         <div class="col-12">
-                            <input type="tel" name="telefone" id="telefone" maxlength="11" onkeypress="validacao_telefone_com_mensagem(true, 'rpz12312');">
+                            <input type="tel" name="telefone" id="telefone" maxlength="14" onkeypress="validacao_telefone_com_mensagem(true, 'rpz12312');">
                         </div>
                         <div class="col-12">
                             <span id="telefone_message"></span>
